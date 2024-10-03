@@ -1,4 +1,7 @@
+![Tailwindcss](https://img.shields.io/badge/tailwincss-%2335495e.svg?style=for-the-badge&logo=tailwindcss&logoColor=%234FC08D)&nbsp;
+
 # Template for tailwindcss
+
 
 The is a fast config for tailwindcss
 
