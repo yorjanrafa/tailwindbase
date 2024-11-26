@@ -1,27 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/styles/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/custom.css" />
+    <title>Metu</title>
+
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
-  <body>
-    <!-- create a card in tailwindcdd -->
-    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col m-4">
-        <div class="mb-2">
-          <h2 class="text-gray-900 font-bold text-xl">Card title</h2>
-          <p class="text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipisicing eslit.
-            Volupta hols tibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="flex items-center">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Button
-          </button>
+  <body class="bg-gray-100 flex justify-center w-full">
+    <main class="max-w-xl w-full">
+      <div
+        class="w-full h-28 bg-cover bg-center"
+        style="background-image: url('../src/assets/banner-O.jpg')"
+      ></div>
+      <div class="w-full py-4">
+        <h1 class="text-center text-3xl font-merienda">El Renacer</h1>
+
+        <h2 class="text-center text-">Bar - Restaurant</h2>
+      </div>
+
+      <div
+        class="w-full p-4 overflow-x-scroll flex gap-8 scroll-bar-hidden text-lg bg-gray-200"
+      >
+        <p class="text-orange-900">Entradas</p>
+        <p>Sopas</p>
+        <p>Arroz</p>
+        <p>Pastas</p>
+        <p>Ensaladas</p>
+        <p>Bebidas</p>
+        <p>Sopas</p>
+      </div>
+
+      <div
+        class="rounded-2xl overflow-hidden m-3 border border-gray-400 shadow-md"
+        style="background-color: #55472202"
+      >
+        <div
+          class="w-full h-20 bg-cover bg-center"
+          style="background-image: url(../src/assets/categories/entradas.jpg)"
+        ></div>
+        <div class="py-4">
+          <h3 class="text-center font-merienda text-xl pb-1">Entradas</h3>
+          <p class="text-center text-sm">Servicio de entrada</p>
         </div>
       </div>
+      <!-- create a card in tailwindcdd -->
+
+      <!-- platos comienza -->
+      <div
+        class="rounded-2xl overflow-hidden m-3 border border-gray-400 shadow-md"
+        style="background-color: #55472202"
+      >
+        <div class="w-full bg-cover bg-center" id="plato-container">
+          <div
+            id="plato"
+            class="flex p-4 justify-between items-center gap-4"
+            style="border-bottom: 1px solid #0000002d"
+          >
+            <img
+              src="../src/assets/categories/platos/redonditos.png"
+              alt=""
+              class="w-16 rounded-full"
+            />
+            <div class="w-full">
+              <div>
+                <h4 class="font-bold">Redonditos</h4>
+
+                <p class="text-sm">Redonditos vegetarianos de trigo</p>
+                <p class="text-sm">Contiene: Vegetales, queso, trigo</p>
+              </div>
+            </div>
+            <div class="w-full">
+              <p class="text-red-700 font-bold">$ 3.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- platos finaliza -->
+    </main>
+
+    <script>
+      let card_container = document.getElementById("plato-container");
+      let card = document.getElementById("plato");
+      // insert 3 clones of cardo into card_container
+      for (let i = 0; i < 6; i++) {
+        card_container.appendChild(card.cloneNode(true));
+      }
+    </script>
   </body>
 </html>
